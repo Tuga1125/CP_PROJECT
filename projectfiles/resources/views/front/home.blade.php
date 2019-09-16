@@ -38,12 +38,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>New Items</h3>
-            </div>
-        </div>
+
         <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -56,7 +51,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Pizza</h4>
                     <p class="card-text">We have every type of Pizza.</p>
-                    <button class="btn btn-primary" type="submit">ORDER</button>
+                    <a href="{{route('orders.store') }}"><button class="btn btn-primary" type="submit">ORDER</button></a>
                 </div>
             </div>
             <div class="card">
@@ -109,9 +104,10 @@
                 <img class="card-img-top" src="images/Spaghetti.jpeg" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Spaghetti</h4>
-                    <p class="card-text">You can get any types of spaghetti you like.</p>
+                    <p class="card-text">You can get varieties of spaghetti you like.</p>
                     <button class="btn btn-primary" type="submit">ORDER</button>
                 </div>
             </div>
     </div>
     </div>
+@endsection

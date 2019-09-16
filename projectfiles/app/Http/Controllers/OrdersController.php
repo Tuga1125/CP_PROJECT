@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
+use App\customer;
 
 class OrdersController extends Controller
 {
@@ -15,8 +16,9 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
-       dd(Auth::user());
+        
+        $orders= Order::all();
+        return view("orders.order", compact('orders'));
     }
 
     /**
@@ -26,7 +28,9 @@ class OrdersController extends Controller
      */
     public function create()
     {
-        //
+        
+        $orders= Order::all();
+        return view("orders.order", compact('orders'));
     }
 
     /**
@@ -37,7 +41,36 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd(Auth::customer()); // dd($request->all());
+        
+                $validation =  Validator::make($request->all(), [
+                    'user_id' => ['required', 'string', 'max:100'],
+                    'order_date'=>['required','string','max:100'],
+                    'status' => ['required', 'string'],
+                    'created_at'=>['required','string','max:100'],
+                    'updated_at'=>['required','string','max:100'],
+          
+                ]);
+        
+                // dd($validation->errors());
+        
+                if($validation->passes()){
+                        // Handle the user upload of avatar
+            
+                        $orders['user_id'] = $request->user_id;
+                        $orders['order_date']=$request->order_date;
+                        $orders['status']=$request->status;
+                        $orders['created_at']=$request->created_at;
+                        $orders['updated_at']=$request->updated_at;
+            
+                        Order::create($orders);
+                        // dd($validation->errors());
+                        return back()->with('errors', $validation->errors());
+                }else{
+                    return back()->with('errors', $validation->errors());
+                }
+       
+
     }
 
     /**
@@ -59,7 +92,10 @@ class OrdersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $order= Order::all();
+
+        $orders= Order::find($id);
+        return view("orders.order", compact('order', 'orders'));
     }
 
     /**

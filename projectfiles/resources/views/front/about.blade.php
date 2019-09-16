@@ -3,15 +3,15 @@
 <div class="container-fluid">
 <h3>ABOUT US</h3>    
 </div>
-<div class="container">
-<img src="/images/b.jpeg" alt="">
+<div class="col-md-12">
+<img src="/images/b.jpeg" alt="" width="100%">
 </div>
 
-<div class="col-md-9">
+<div class="col-md-12">
 <div class="card">
     
     <div class="card-body">
-        <h5 class="card-title">Who We Are  </h5>
+        <h5 class="card-title">only you could set the heart on fire  </h5>
         <p class="card-text">We are an online food ordering system. We delivering food  Since inception in 2009, 
         we have turned out to be number one food provider in Nepal with 200 million+ 
         page views with 2.5 million+ progressive visits every month, created 150,000+ 
