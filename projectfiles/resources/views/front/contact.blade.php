@@ -5,9 +5,9 @@
     <div class="row">
       <div class="col-md-6">
           <address>
-         <h1> <label for="name">ADDRESS</label> </h1>
+         <h1> <label for="name">CONTACT INFO</label> </h1>
           <p>
-              LORD <br>
+              OFOS <br>
               Kupondole, Kathmandu<br>
               Nepal<br>
               <strong>Phone:</strong> +977-9860 240841<br>
@@ -26,7 +26,7 @@
         <div class="form-group">
           <label for="address">ADDRESS</label>
           <input type="text" class="form-control" name="address" id="address" aria-describedby="helpId" placeholder="Enter your address" value="@if(isset($contact)){{$contact->address}} @endif"> 
-        </div>,
+        </div>
         
         <div class="form-group">
           <label for="send message">SEND MESSAGE</label>

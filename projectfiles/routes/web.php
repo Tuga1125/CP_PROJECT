@@ -32,6 +32,9 @@ Route::group(['middleware' => ['admin']], function () {
 // Route::group(['middleware' => ['customer']], function () {
     Route::resource('orders', 'OrdersController');
     Route::resource('orderitem', 'OrderItemController');
+    Route::get('/order',function(){
+    return view('orders.order');
+    });
 // });
 
 

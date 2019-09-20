@@ -35,7 +35,7 @@
       <button type="submit" class="btn btn-primary">Cancel</button>
     </form>
 
-<!-- <table class="table">
+<table class="table">
   <thead>
     <tr>
       <th>User Id</th>
@@ -67,7 +67,7 @@
     </tr>
  @endforeach
   </tbody>
-</table> -->
+</table>
 
   </div>
 @endsection 

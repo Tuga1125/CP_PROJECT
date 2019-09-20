@@ -15,12 +15,11 @@ class Restaurant extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('role')->default('customer');
-            $table->string('name');
+            $table->enum('user_role', ['admin', 'customer'])->nullable();           
+             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('type', ['admin', 'user'])->default('user');
             $table->string('photo_url')->nullable();    
             $table->rememberToken();
             $table->timestamps();
@@ -51,6 +50,7 @@ class Restaurant extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
             $table->date('order_date');
+            $table->integer('quantity');
             $table->enum('status', ['Delivered', 'In trainsit']);
             $table->timestamps();
         });

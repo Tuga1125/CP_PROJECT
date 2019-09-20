@@ -11,7 +11,7 @@
 <div class="card">
     
     <div class="card-body">
-        <h5 class="card-title">only you could set the heart on fire  </h5>
+        <h5 class="card-title">Who We Are  </h5>
         <p class="card-text">We are an online food ordering system. We delivering food  Since inception in 2009, 
         we have turned out to be number one food provider in Nepal with 200 million+ 
         page views with 2.5 million+ progressive visits every month, created 150,000+ 
@@ -29,12 +29,11 @@
     </div>
     <div class="card-body">
         <h5 class="card-title">What We Do </h5>
-        <p class="card-text">We are more than just a job site. From the web, to mobile,
-        to social media tools and apps, we service companies of all sizes to find the 
-        right fit using most advanced technology in Nepal. Providing recruitment solutions 
-        to employers finding, fostering and preparing the right candidates in every possible ways
-        with an effective tracking system and a dedicated team of customer service to both; the employers
-        and the job seekers, has always been our primary goal.
+        <p class="card-text">We are more than just a job site.  Far far away, behind the word mountains, 
+        far from the countries, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
+        a large language ocean. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+         A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted 
+         parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.
         The employer dashboard at merojob facilitates employers like you register your esteemed organization, 
         post jobs and use the simplified shortlisting process to hire the best in few clicks with technology-guided tools.
         Customized platform provided to job seekers, on the other hand, let them register, search, apply and get jobs for free.

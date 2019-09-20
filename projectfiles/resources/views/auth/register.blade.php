@@ -63,14 +63,11 @@
 
                         <div class="form-group form-check">
     <div class="col-md-8 ml-auto">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="user_role"  value="admin">
        
         <label class="form-check-label" for="exampleCheck1">Admin</label>
-    </div>
-  </div>
-  <div class="form-group form-check">
-    <div class="col-md-8 ml-auto">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+ 
+        <input type="radio" class="form-check-input" id="exampleCheck1" name="user_role" value="customer">
        
         <label class="form-check-label" for="exampleCheck1">Customer</label>
     </div>

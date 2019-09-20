@@ -59,7 +59,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Burrito</h4>
                     <p class="card-text">We have every type of burrito.</p>
-                    <button class="btn btn-primary" type="submit">ORDER</button>
+                    <a href="{{route('orders.store') }}"><button class="btn btn-primary" type="submit">ORDER</button></a>
                 </div>
             </div>
             <div class="card">
@@ -67,7 +67,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Mo:Mo</h4>
                     <p class="card-text">We have varieties of mo:mo</p>
-                    <button class="btn btn-primary" type="submit">ORDER</button>
+                    <a href="{{route('orders.store') }}"><button class="btn btn-primary" type="submit">ORDER</button></a>
                     
                 </div>
             </div>
@@ -89,7 +89,7 @@
             <div class="card-body">
                 <h4 class="card-title">Green Beans Fries</h4>
                 <p class="card-text">We deliver different Bean Fries.</p>
-                <button class="btn btn-primary" type="submit">ORDER</button>
+                <a href="{{route('orders.store') }}"><button class="btn btn-primary" type="submit">ORDER</button></a>
             </div>
         </div>
         <div class="card">
@@ -97,7 +97,7 @@
             <div class="card-body">
                 <h4 class="card-title">Burger</h4>
                 <p class="card-text">You can order any Burger you want.</p>
-                <button class="btn btn-primary" type="submit">ORDER</button>
+                <a href="{{route('orders.store') }}"><button class="btn btn-primary" type="submit">ORDER</button></a>
             </div>
         </div>
         <div class="card">
@@ -105,7 +105,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Spaghetti</h4>
                     <p class="card-text">You can get varieties of spaghetti you like.</p>
-                    <button class="btn btn-primary" type="submit">ORDER</button>
+                    <a href="{{route('orders.store') }}"><button class="btn btn-primary" type="submit">ORDER</button></a>
                 </div>
             </div>
     </div>
