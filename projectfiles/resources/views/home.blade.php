@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-kjhkjhkjhkjhkj
+kjhkjhkjhkjhkjopjih;gf bgnhjnbikhvj gbnhijhbukvjninbh
 @endsection

@@ -36,4 +36,42 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-}
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class,'customers_id','id');
+
+    }
+
+    public function fooditems()
+    {
+        return $this->hasMany(Fooditem::class, 'id', 'customers_id');
+    }
+
+    public function customers()
+    {
+        return $this->belongsTo(Customers::class,'customers_id','id');
+    }
+
+ 
+
+
+    public function checkRole()
+    {
+        if ($this->user_roles->name == 'Customer') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function checkAdmin()
+    {
+        if ($this->user_roles->name == 'Admin') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    }

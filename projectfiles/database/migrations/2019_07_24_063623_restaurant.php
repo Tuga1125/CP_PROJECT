@@ -15,8 +15,8 @@ class Restaurant extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('user_role', ['admin', 'customer'])->nullable();           
-             $table->string('name');
+            $table->enum('user_role', ['admin', 'customer'])->nullable();     
+            $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -65,7 +65,6 @@ class Restaurant extends Migration
             $table->string('price');
          
         });  
-
     }
     /**
     * Reverse
@@ -76,12 +75,10 @@ class Restaurant extends Migration
     {
         Schema::dropIfExists('users');
 
-        Schema::dropIfExists('invoice_items');
-        Schema::dropIfExists('invoices');
+        Schema::dropIfExists('food_item_types');
+        Schema::dropIfExists('food_items');
         Schema::dropIfExists('orders');
-        Schema::dropIfExists('meals');
-        Schema::dropIfExists('restaurant_tables');
-        Schema::dropIfExists('items');
+        Schema::dropIfExists('orderitem');
         Schema::dropIfExists('password_resets');
     }
 }

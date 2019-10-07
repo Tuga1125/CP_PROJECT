@@ -8,5 +8,5 @@ class Payment extends Model
 {
     
     protected $table="payments";
-    protected $fillable=['payment_date', 'payment_amount', 'payment_type'];
+    protected $fillable=['user_id','payment_date', 'payment_amount', 'payment_type'];
 }

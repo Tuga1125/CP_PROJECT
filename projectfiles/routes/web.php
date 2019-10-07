@@ -10,6 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',function(){
+return view('admin.index');
+});
+
+// Route::get('/admin/login',function(){
+
+// });
 
 Route::get('/', 'FrontController@index')->name('homepage');
 
@@ -22,19 +29,25 @@ Route::group(['middleware' => ['admin']], function () {
 
     Route::resource('fooditemtype', 'FoodItemTypeController');
     Route::get('/dashboard',function(){
-        return view('home');
+        return view('layouts.adminsidebar');
     });
+
 
 });
+Route::resource('orders', 'OrdersController');
+Route::resource('orderitem', 'OrderItemController');
 
 
-
-// Route::group(['middleware' => ['customer']], function () {
-    Route::resource('orders', 'OrdersController');
-    Route::resource('orderitem', 'OrderItemController');
-    Route::get('/order',function(){
-    return view('orders.order');
-    });
+Route::resource('customer','CustomerController'	);
+// Route::group(['middleware' => ['client']], function () {
+   
+//     Route::get('/adminsidebar', 'AdminController@index')->name('adminsidebar');
+//     // Route::get('/order',function(){
+//     // return view('orders.order');
+//     // });
+//     Route::get('/dashboard',function(){
+//         return view('layouts.customersidebar');
+//     });
 // });
 
 
@@ -47,3 +60,22 @@ Route::get('/about', function(){
 Route::get('/home', function(){
     return view('front.home');
 });
+ 
+ //admin routes
+//  Route::get('/admin/dashboard', function () {
+//     $courses = Course::all();
+//     return view('admin.courses', compact('courses'));
+// });
+
+// Route::resource('admin', 'AdminController');
+Route::get('/admin','AdminController@index');
+
+
+// Route::get('/admin/users', function () {
+//     $users = User::all();
+//     return view('admin.users', compact('users'));
+// });
+
+// Route::get('/admin', function(){
+//     return view('layouts.adminsidebar');
+// });

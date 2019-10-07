@@ -12,21 +12,45 @@
       <form action="{{route('orders.store')}}" method="POST">
       @csrf
     @endif
+
+<!-- @foreach($errors->all() as $error)
+  {{$error }} 
+@endforeach -->
+
+
+    
   <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
  
     <div class="form-group">
       <label for="order_date">Order date</label>
-      <input type="date" class="form-control" name="order_date" id="order_date" aria-describedby="helpId" placeholder="Enter order date"if> 
+      <input type="date" class="form-control  @error('order_date') is-invalid @enderror" name="order_date" id="order_date" aria-describedby="helpId" placeholder="Enter order date"if> 
+      @error('order_date')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
     </div> 
 
     <div class="form-group">
       <label for="order_status">Quantity</label>
-      <input type="numeric" class="form-control" name="quantity" id="order_status" aria-describedby="helpId" placeholder="Enter quantity" > 
+      <input type="numeric" class="form-control   @error('quantity') is-invalid @enderror" name="quantity" id="order_status" aria-describedby="helpId" placeholder="Enter quantity" > 
+
+          @error('quantity')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
+
     </div>
     
     <div class="form-group">
       <label for="order_status"> Status</label>
-      <input type="text" class="form-control" name="status" id="order_status" aria-describedby="helpId" placeholder="Enter payment status"> 
+      <input type="text" class="form-control  @error('status') is-invalid @enderror" name="status" id="order_status" aria-describedby="helpId" placeholder="Enter payment status"> 
+      @error('status')
+              <span class="invalid-feedback" role="alert">
+                  <strong>{{ $message }}</strong>
+              </span>
+          @enderror
     </div>
     
     </select>
@@ -35,7 +59,7 @@
       <button type="submit" class="btn btn-primary">Cancel</button>
     </form>
 
-<!-- <table class="table">
+<table class="table">
   <thead>
     <tr>
       <th>User Id</th>
@@ -67,7 +91,7 @@
     </tr>
  @endforeach
   </tbody>
-</table> -->
+</table>
 
   </div>
 @endsection 

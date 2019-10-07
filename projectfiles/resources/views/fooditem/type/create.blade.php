@@ -35,12 +35,12 @@
   @foreach($fooditemtypes as $data)
     <tr>
       <td scope="row">{{$data->name}}</td>
-      <td><a href="{{route('fooditemtype.edit', $data->id)}}">Edit</a></td>
+      <td><a href="{{route('fooditemtype.edit', $data->id)}}" class="btn btn-info">Edit</a></td>
       <td>
       <form action="{{route('fooditemtype.destroy', $data->id)}}" method="post">
       @csrf
       @method('DELETE')
-      <button type="submit" class="btn btn-primary">Delete</button>
+      <button type="submit" class="btn btn-danger">Delete</button>
       
       </form>
       

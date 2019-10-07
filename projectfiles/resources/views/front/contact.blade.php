@@ -22,7 +22,7 @@
           <label for="email">EMAIL</label>
           <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Enter your email" value="@if(isset($contact)){{$contact->email}} @endif"> 
         </div>
-      
+    
         <div class="form-group">
           <label for="address">ADDRESS</label>
           <input type="text" class="form-control" name="address" id="address" aria-describedby="helpId" placeholder="Enter your address" value="@if(isset($contact)){{$contact->address}} @endif"> 
@@ -30,7 +30,7 @@
         
         <div class="form-group">
           <label for="send message">SEND MESSAGE</label>
-          <textarea class="form-control" name="sendmessage" placeholder="Enter message you want to send."id="" rows="3">@if(isset($contact)){{$contact->sendmessage}} @endif</textarea>
+          <textarea class="form-control" name="send_message" placeholder="Enter message you want to send."id="" rows="3" value="@if(isset($contact)){{$contact->sendmessage}} @endif"></textarea>
         </div>
        
        

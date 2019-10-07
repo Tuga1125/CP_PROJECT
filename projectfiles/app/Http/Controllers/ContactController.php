@@ -44,7 +44,7 @@ class ContactController extends Controller
                 $validation =  Validator::make($request->all(), [
                     'email' => ['required', 'string', 'max:100'],
                     'address'=>['required','string','max:100'],
-                    'sendmessage' => ['required', 'string'],
+                    'send_message' => ['required', 'string'],
           
                 ]);
         
@@ -55,7 +55,7 @@ class ContactController extends Controller
             
                         $contact['email'] = $request->email;
                         $contact['address']=$request->address;
-                        $contact['sendmessage']=$request->sendmessage;
+                        $contact['send_message']=$request->send_message;
             
                         Contact::create($contact);
                         // dd($validation->errors());

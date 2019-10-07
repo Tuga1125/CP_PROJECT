@@ -17,9 +17,10 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        $customers=User::where('user_role', 2)->get();
+        $customers=User::where('user_role',2)->get();
         $orders= Order::all();
         return view("orders.order", compact('orders','customers'));
+      
     }
 
     /**
@@ -68,8 +69,7 @@ class OrdersController extends Controller
                         'user_id' => $request->user_id,
                         'order_date'=> $request->order_date,
                         'status'=> $request->status,
-                        
-                        'quantity'=> $request->quantity
+                       'quantity'=> $request->quantity
                         ]);
                         // dd($validation->errors());
                         return back()->with('errors', $validation->errors());
